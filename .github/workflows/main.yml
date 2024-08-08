@@ -13,10 +13,6 @@ jobs:
       - name: IDK
         run: mkdir -p ~/idk
 
-      - name: Authenticate with GitHub CLI
-        run: |
-          echo "${{ secrets.PAT }}" | gh auth login --with-token
-
       - name: Clone target repository
         run: |
           git clone https://github.com/WHO53/rom-lenovo-akita-a9 ~/a9
@@ -36,6 +32,7 @@ jobs:
       - name: Commit and push changes
         run: |
           cd ~/a9
+          echo "${{ secrets.PAT }}" | gh auth login --with-token
           git config user.name WHO53
           git config user.email notwho53@gmail.com
           git add .
