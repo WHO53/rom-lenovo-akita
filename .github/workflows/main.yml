@@ -19,7 +19,7 @@ jobs:
 
       - name: Clone target repository
         run: |
-          git clone WHO53/rom-lenovo-akita-a9 ~/a9
+          git clone https://github.com/WHO53/rom-lenovo-akita-a9 ~/a9
 
       - name: DumperX
         run: |
