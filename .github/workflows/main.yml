@@ -10,6 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: GIT
+        run: |
+          git config --global user.name WHO53
+          git config --global user.email notwho53@gmail.com
+
       - name: DumperX
         run: |
           git clone https://github.com/DumprX/DumprX ~/D
@@ -20,12 +25,9 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          echo "${{ secrets.PAT }}" | gh auth login --with-token
-          git config --global user.name WHO53
-          git config --global user.email notwho53@gmail.com
-          git clone https://github.com/WHO53/rom-lenovo-akita-a9 ~/a9
+          git clone https://${{ secrets.PAT }}@github.com/WHO53/rom-lenovo-akita-a9.git ~/a9
           cp -r ~/D/out/* ~/a9
           cd ~/a9
           git add .
           git commit -m "Update from out directory"
-          git push
+          git push origin main
