@@ -1,0 +1,43 @@
+name: Push out directory to repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  push-to-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: IDK
+        run: mkdir -p ~/idk
+
+      - name: Authenticate with GitHub CLI
+        run: |
+          echo "${{ secrets.PAT }}" | gh auth login --with-token
+
+      - name: Clone target repository
+        run: |
+          git clone WHO53/rom-lenovo-akita-a9 ~/a9
+
+      - name: DumperX
+        run: |
+          git clone https://github.com/DumprX/DumprX ~/D
+          cd ~/D
+          bash setup.sh
+          wget -O rom.zip 
+          bash dumper.sh rom.zip
+
+      - name: Copy out directory contents to target repo
+        run: |
+          cp -r ~/D/out/* ~/a9
+
+      - name: Commit and push changes
+        run: |
+          git config user.name WHO53
+          git config user.email notwho53@gmail.com
+          cd ~/a9
+          git add .
+          git commit -m "Update from out directory" || echo "No changes to commit"
+          git push
