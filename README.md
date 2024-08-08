@@ -1,0 +1,20 @@
+## full_akita_row_call-user 9 PPR1.180610.011 TB-8505X_U release-keys
+- Manufacturer: lenovo
+- Platform: mt6761
+- Codename: akita_row_call
+- Brand: Lenovo
+- Flavor: full_akita_row_call-user
+- Release Version: 9
+- Kernel Version: 4.9.117
+- Id: PPR1.180610.011
+- Incremental: TB-8505X_USR_S100064_2009010959_V5.140_BMP_ROW
+- Tags: release-keys
+- CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
+- A/B Device: false
+- Treble Device: true
+- Locale: undefined
+- Screen Density: undefined
+- Fingerprint: 
+- OTA version: 
+- Branch: full_akita_row_call-user-9-PPR1.180610.011-TB-8505X_U-release-keys
+- Repo: lenovo_akita_row_call_dump
