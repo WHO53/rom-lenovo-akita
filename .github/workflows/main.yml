@@ -35,9 +35,9 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          cd ~/a9
           git config user.name WHO53
           git config user.email notwho53@gmail.com
-          cd ~/a9
           git add .
           git commit -m "Update from out directory" || echo "No changes to commit"
           git push
