@@ -26,7 +26,7 @@ jobs:
           git clone https://github.com/DumprX/DumprX ~/D
           cd ~/D
           bash setup.sh
-          wget -O rom.zip 
+          wget -O rom.zip https://mirrors-obs-2.lolinet.com/firmware/lenowow/2019/Tab_8/TB-8505X/TB-8505X_S100064_200901_BMP.zip
           bash dumper.sh rom.zip
 
       - name: Copy out directory contents to target repo
