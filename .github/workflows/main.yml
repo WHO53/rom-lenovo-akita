@@ -30,7 +30,7 @@ jobs:
           mkdir a9-200901
           mv ../temp/* a9-200901
           mkdir a10-220720
-          cp -r ~/D/out/* ~/a9/a10-220720
+          mv ~/D/out/* a10-220720
           git add -A
           git commit -m "i"
           git push
