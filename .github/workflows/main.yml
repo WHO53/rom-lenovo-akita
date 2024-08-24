@@ -17,7 +17,7 @@ jobs:
           git clone https://github.com/DumprX/DumprX ~/D
           cd ~/D
           bash setup.sh
-          wget -q -O rom.zip https://mirrors-obs-2.lolinet.com/firmware/lenowow/2019/Tab_8/TB-8505X/TB-8505X_S320029_220720_BMP.zip
+          wget -q -O rom.zip https://mirrors.lolinet.com/firmware/lenowow/2023/Tab_M8_4th_Gen_2024/TB301XU/TB301XU_S000083_230830_ROW.zip
           bash dumper.sh rom.zip
           find ~/D/out -type f -name "*.apk" -delete
 
@@ -25,12 +25,8 @@ jobs:
         run: |
           git clone --depth=1 https://${{ secrets.PAT }}@github.com/WHO53/rom-lenovo-akita-a9.git ~/rom
           cd ~/rom
-          mkdir ../temp
-          mv * ../temp
-          mkdir a9-200901
-          mv ../temp/* a9-200901
-          mkdir a10-220720
-          mv ~/D/out/* a10-220720
+          mkdir rgx-m8-2024
+          mv ~/D/out/vendor/firmware/rgx.fw rgx-m8-2024
           git add -A
-          git commit -m "i"
+          git commit -m "rgx fw dump"
           git push
