@@ -7,9 +7,6 @@ jobs:
   push-to-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: GIT
         run: |
           git config --global user.name WHO53
@@ -26,7 +23,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git clone https://${{ secrets.PAT }}@github.com/WHO53/rom-lenovo-akita-a9.git ~/rom
+          git clone --depth=1 https://${{ secrets.PAT }}@github.com/WHO53/rom-lenovo-akita-a9.git ~/rom
           cd ~/rom
           mkdir ../temp
           mv * ../temp
