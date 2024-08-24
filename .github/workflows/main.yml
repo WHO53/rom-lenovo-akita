@@ -20,15 +20,20 @@ jobs:
           git clone https://github.com/DumprX/DumprX ~/D
           cd ~/D
           bash setup.sh
-          wget -O rom.zip https://mirrors-obs-2.lolinet.com/firmware/lenowow/2019/Tab_8/TB-8505X/TB-8505X_S100064_200901_BMP.zip
+          wget -O rom.zip https://mirrors-obs-2.lolinet.com/firmware/lenowow/2019/Tab_8/TB-8505X/TB-8505X_S320029_220720_BMP.zip
           bash dumper.sh rom.zip
           find ~/D/out -type f -name "*.apk" -delete
 
       - name: Commit and push changes
         run: |
-          git clone https://${{ secrets.PAT }}@github.com/WHO53/rom-lenovo-akita-a9.git ~/a9
-          cp -r ~/D/out/* ~/a9
-          cd ~/a9
+          git clone https://${{ secrets.PAT }}@github.com/WHO53/rom-lenovo-akita-a9.git ~/rom
+          cd ~/rom
+          mkdir ../temp
+          mv -r * ../temp
+          mkdir a9-200901
+          mv ../temp/* a9-200901
+          mkdir a10-220720
+          cp -r ~/D/out/* ~/a9/a10-220720
           git add -A
           git commit -m "i"
           git push
