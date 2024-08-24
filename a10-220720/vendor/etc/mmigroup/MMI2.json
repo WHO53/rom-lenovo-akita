@@ -1,0 +1,64 @@
+{
+  "itemConfig": [
+    {
+      "showName": "MainCamera",
+      "support": true,
+      "action": "com.mmigroup.action.CAMERATESTTWO",
+      "automatic": false,
+      "support_autoTest_autopass": false,
+      "paramconfig": {
+        "cameraId": 0,
+        "support_takepicture": true,
+        "takepicture_not_save_picture": true,
+        "auto_takepicture": false,
+        "is_open_flashLight": true,
+        "flashType": "auto",
+        "support_cameraCheck": true
+      },
+      "oldAct": [
+        "CAMERA_BACK"
+      ]
+    },
+    {
+      "showName": "FrontCamera",
+      "support": true,
+      "action": "com.mmigroup.action.CAMERATESTTWO",
+      "automatic": false,
+      "support_autoTest_autopass": false,
+      "paramconfig": {
+        "cameraId": 1,
+        "support_takepicture": true,
+        "camera_Rotation":180,
+        "takepicture_not_save_picture": true,
+        "support_cameraCheck": true
+      },
+      "oldAct": [
+        "CAMERA_FRONT"
+      ]
+    },
+    {
+      "showName": "LCD",
+      "action": "com.mmigroup.action.LCD",
+      "support": true,
+      "automatic": false,
+      "support_autoTest_autopass": false,
+      "paramconfig": {
+        "auto_switch": false,
+        "lcd_pic": [
+          "Color_R=2000",
+          "Color_G=2000",
+          "Color_B=2000",
+          "Color_W=2000",
+          "Color_BL=2000",
+          "Color_GR127=2000"
+        ]
+      }
+    },
+    {
+      "showName": "TouchPal",
+      "action": "com.mmigroup.action.TOUCHPAL",
+      "support": true,
+      "automatic": false
+    }
+  ]
+}

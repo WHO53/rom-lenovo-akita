@@ -1,0 +1,20 @@
+## full_akita_row_call-user 10 QP1A.190711.020 TB-8505X_U release-keys
+- Manufacturer: lenovo
+- Platform: mt6761
+- Codename: akita_row_call
+- Brand: Lenovo
+- Flavor: full_akita_row_call-user
+- Release Version: 10
+- Kernel Version: 4.9.190
+- Id: QP1A.190711.020
+- Incremental: TB-8505X_USR_S320029_2207200958_V9.56_BMP_ROW
+- Tags: release-keys
+- CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
+- A/B Device: false
+- Treble Device: true
+- Locale: undefined
+- Screen Density: undefined
+- Fingerprint: 
+- OTA version: 
+- Branch: full_akita_row_call-user-10-QP1A.190711.020-TB-8505X_U-release-keys
+- Repo: lenovo_akita_row_call_dump
